@@ -154,12 +154,17 @@ numpy.array([list1])
 import numpy as np #np is alias
 np1 = np.arange(1,10)
 np1
-
+np2 = np.arange(50,101)
+np2
+np.arange?
 x=np.arange(start=1,stop=1000000,step=2)
+x
 len(x)
 x[1:100]
 x[1:50:10]
-np
+x[1:50:5]
+np?
+np.mean(x[0:100])
 np.mean(np.arange(1,10000000))
 np1
 type(np1)
@@ -170,13 +175,14 @@ np.mean?  # help on mean function of numpy
 
 np2 = np.array([ 90, 50, 60, 70 ])
 np2
-np.sort(np2)
+np.sort?
+-np.sort(-np2)
 dir(np)
-
+rev(np)
 np3 = np.array([[1,4],[3,1],[5,6],[10,50]])
-np3
+np4
 np3.shape
-
+np4 = np.array([['a','b'],['c','d']]), np4
 np3.reshape((-1,1))  #1 column from 2 column
 
 #http://cs231n.github.io/python-numpy-tutorial/
@@ -188,7 +194,8 @@ import pandas as pd
 pd?
 dir(pd)
 
-df1 = pd.DataFrame({'rollno':[1,2,3,4], 'name': [ "Dhiraj", "Kounal", "Akhil", "Pooja" ], 'marks':[ 40, 50, 60.5, 70 ], 'gender':['M', 'M','M', 'F']})
+df1 = pd.DataFrame({'rollno':[1,2,3,4], 'name': [ "Dhiraj", "Kounal", "Akhil", "Pooja" ], 'marks':[ 40, 50, 60.5, 70], 'gender':['M', 'M','M', 'F']})
+
 df1
 type(df1) 
 
@@ -214,7 +221,7 @@ plt.hist(df1['marks'])
 import seaborn as sns
 # sns.set(style="ticks", color_codes=True)
 iris = sns.load_dataset("iris")
-iris.head()
+iris.head(n=20)
 iris.tail()
 df1.groupby('gender').size()
 iris.groupby('species').size().plot(kind='bar')
